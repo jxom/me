@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat');
+
+$jake-color: hsla(250, 100%, 50%, 0.6);
+
+$family-sans-serif: "Montserrat", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-serif: Georgia,Cambria,"Times New Roman",Times,serif;
+$family-primary: $family-serif;
+@import "~bulma/sass/utilities/_all.sass";
+
+$link: $text-strong;
+$link-hover: $jake-color;
+$fullhd: 1152px + (2 * $gap);
+@import "~bulma/sass/base/_all.sass";
+
+$size-1: 5rem;
+$title-size: $size-1;
+$subtitle-size: $size-3;
+@import "~bulma/sass/elements/_all";
+
+@import "~bulma/sass/grid/_all.sass";
+
+@import "~bulma/sass/layout/_all.sass";
+
+.title {
+	margin-bottom: 2.5rem !important;
+}
+
+a {
+	position: relative;
+	transition: all .1s ease;
+	border-bottom: 0.2rem solid $jake-color;
+}
+
+.title a {
+	border-bottom: 0px;
+}
+.title a::after {
+	content: '';
+	height: 1rem;
+	width: 100%;
+	bottom: -0.5rem;
+	left: 0;
+	position: absolute;
+	background-color: $jake-color;
+}
+
+.title,
+.subtitle {
+	font-family: $family-sans-serif;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
